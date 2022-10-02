@@ -24,7 +24,7 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Posts</h6>
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -83,8 +83,11 @@
 
     @section('scripts')
     <!-- Page level plugins -->
-    <script src="{{ asset('vendor/datatables/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js">
+            </script>
+
+            <script src=" https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js">
+            </script>
 
     <!-- Page level custom scripts -->
     {{-- <script src="{{asset('js/demo/datatables-demo.js') }}"></script> --}}

@@ -13,7 +13,7 @@
         </div>
         @endif --}}
 
-
+  <x-alerts></x-alerts>
 
 <form action="{{ route('post.store') }}" method="post" enctype="multipart/form-data">
 @csrf

@@ -2,6 +2,9 @@
     @section('content')
 
     <h1>Edit Post</h1>
+
+      <x-alerts></x-alerts>
+
     <form action="{{ route('post.update',$post->id) }}" method="post" enctype="multipart/form-data">
     @csrf
     @method('PATCH')

@@ -44,7 +44,7 @@ class UserController extends Controller
         }
 
         $user->update($inputs);
-
+        session()->flash('user-updated', 'User has been updated');
         return back();
     }
 

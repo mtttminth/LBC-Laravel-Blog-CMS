@@ -14,6 +14,6 @@ class AdminsController extends Controller
     {
         $userCount = User::count();
         $postCount = Post::count();
-        return view('admin.index', compact('userCount'), compact('postCount'));
+        return view('admin.index', compact('userCount', 'postCount'));
     }
 }

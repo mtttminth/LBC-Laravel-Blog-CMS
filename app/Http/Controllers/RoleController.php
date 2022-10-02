@@ -24,7 +24,7 @@ class RoleController extends Controller
 
     public function store()
     {
-        request()->validate([
+        $input = request()->validate([
             'name' => ['required'],
         ]);
 
@@ -32,7 +32,7 @@ class RoleController extends Controller
             'name' => Str::ucfirst(Str::lower(request('name'))),
             'slug' => Str::of(Str::lower(request('name')))->slug('-'),
         ]);
-
+        session()->flash('role-created', $input['name'] . ' was created');
         return back();
     }
     public function update(Role $role)
@@ -65,14 +65,14 @@ class RoleController extends Controller
     public function attach(Role $role)
     {
         $role->permissions()->attach(request('permission'));
-
+        session()->flash('updated', 'Role Attached!');
         return back();
     }
 
     public function detach(Role $role)
     {
         $role->permissions()->detach(request('permission'));
-
+        session()->flash('updated', 'Role Detached!');
         return back();
     }
 

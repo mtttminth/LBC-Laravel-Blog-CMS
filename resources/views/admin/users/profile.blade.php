@@ -4,7 +4,7 @@
     @section('content')
 
         <h1>User Profile for : {{$user->name}}</h1>
-
+  <x-alerts></x-alerts>
 
        <div class="row">
 
